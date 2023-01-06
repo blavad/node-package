@@ -1,0 +1,23 @@
+{
+        "name": "@blavad/maths-package",
+        "packageModuleName": "Math",
+        "version": "1.0.0",
+        "description": "",
+        "main": "./lib/cjs/index.js",
+        "module": "./lib/esm/index.js",
+        "files": [
+                "lib/"
+        ],
+        "scripts": {
+                "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+                "browserify": "mkdir -p ./bundle/$(bash ./get-npm-package-version.sh) && browserify ./lib/cjs/index.js --standalone $(bash ./get-package-module-name.sh) > ./bundle/$(bash ./get-npm-package-version.sh)/maths-package-bundle.js",
+                "prepublishOnly": "npm run tsc && npm run browserify",
+                "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+                "typescript": "^4.9.4"
+        }
+}
