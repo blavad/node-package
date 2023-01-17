@@ -11,7 +11,7 @@
         ],
         "scripts": {
                 "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-                "browserify": "mkdir -p ./bundle/$(bash ./scripts/get-npm-package-version.sh) && browserify ./lib/cjs/index.js --standalone $(bash ./scripts/get-package-module-name.sh) > ./bundle/$(bash ./scripts/get-npm-package-version.sh)/$(bash ./scripts/get-url-name.sh)-bundle.js",
+                "browserify": "mkdir -p ./umd/$(bash ./scripts/get-npm-package-version.sh) && browserify ./lib/cjs/index.js --standalone $(bash ./scripts/get-package-module-name.sh) > ./umd/$(bash ./scripts/get-npm-package-version.sh)/$(bash ./scripts/get-url-name.sh).js",
                 "prepublishOnly": "npm run tsc && npm run browserify",
                 "test": "jest"
         },

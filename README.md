@@ -2,14 +2,14 @@
 
 Template to create a typescript node Package from scratch.
 
-### Settings our node package
+### Setting a node package
 
-This template contains is configured to be used with `typescript` and `jest`.
+This template is configured for use with `typescript` and `jest` .
 
-Please edit the following attributes in the `package.json` file:
+Please change  the settings below in the file `package.json`
 - `name` : the name of your package (this name will be used to publish the package on **npm**)
-- `packageModuleName` : the name of the module when using the package in HTML  
-- `urlName`: the name of the generated javascript file that can be included in HTML
+- `packageModuleName` : the name of the **U**niversal **M**odule **D**efinition*
+- `urlName`: the name of the generated UMD file
 - `description`: the description of the package  
 
 
